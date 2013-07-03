@@ -1,0 +1,14 @@
+* { font-family: arial; font-size: 12px; }
+html, body, ul, li { margin: 0; padding: 0; }
+
+#stage { position: fixed; background: white; left: 0; top: 0; right: 0; bottom: 250px; }
+#timeline { position: fixed; background: #333; left: 0; right: 0; bottom: 0; height: 250px; }
+
+#controls { position: fixed; z-index: 10; top: 40%; }
+
+#timeline ul { list-style: none; }
+#timeline .frame { float: left; background: #f9f9f9; height: 250px; border-left: solid 1px #e7e7e7; position: relative; }
+#timeline .frame sup { position: absolute; right: 2px; top: 0px; font-size: 10px; font-weight: bold; color: #ccc; }
+
+#timeline #current { width: 3px; background: darkred; position: absolute; height: 250px; cursor: default; border-radius: 5px; left: 400px; }
+#timeline #current.active { background: darkgreen; }
