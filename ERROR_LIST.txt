@@ -1,0 +1,5 @@
+Error: Unable to connect to database
+Solution: Check if the correct MySQL credentials are provided in the configuration.php file.
+
+Error: Unable to select database
+Solution: Check if the correct MySQL credentials are provided in the configuration.php file and if the provided MySQL account has permissions on it.
