@@ -9,9 +9,10 @@ timeline.frames = new Array();
 timeline.currentbar = null;
 timeline.interval = null;
 timeline.timegap = 200;
-timeline.stopButton = $('#btn-stop');
-timeline.playButton = $('#btn-play');
+timeline.stopButton = null;
+timeline.playButton = null;
 timeline.isrunning = false;
+timeline.controlholder = false;
 
 timeline.init = function() {
 
@@ -19,6 +20,13 @@ timeline.init = function() {
 
 	this.now = 1;
 	this.seconds = 50;
+
+	this.controlholder = $('#controls');
+	this.controlholder.append('<input type="button" onclick="timeline.play()" value="play" id="btn-play" />');
+	this.controlholder.append('<input type="button" onclick="timeline.stop()" value="stop" id="btn-stop" />');
+
+	this.stopButton = $('#btn-stop');
+	this.playButton = $('#btn-play');
 
 	this.stopButton.attr('disabled', true);
 
