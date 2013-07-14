@@ -1,4 +1,8 @@
 <?php
+# set error reporting to maximum
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+
 # Define the base-path
 define('BASE_PATH', realpath(dirname(__file__).'/../').'/');
 
@@ -9,8 +13,6 @@ require(BASE_PATH.'externals/smarty/Smarty.class.php');
 require(BASE_PATH.'includes/class.database.php');
 
 # Set our own default error handler
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
 set_error_handler('validate_php_error');
 
 # Set-up MySQL connection
